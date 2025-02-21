@@ -1,1 +1,7 @@
 test.txt
+/LibraryAPI/.vs
+/LibraryAPI/LibraryAPI/bin/Debug/net8.0
+/LibraryAPI/LibraryAPI/obj/Debug/net8.0
+/LibraryAPI/LibraryAPI/obj
+/LibraryAPI/azurite_workspace
+/LibraryAPI/LibraryAPI/Migrations
