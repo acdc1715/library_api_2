@@ -1,8 +1,6 @@
-﻿using LibraryAPI.Data;
+﻿using LibraryAPI.DataAccess;
 using LibraryAPI.Models.Domain;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Runtime.InteropServices;
 
 namespace LibraryAPI.Repositories
 {

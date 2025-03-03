@@ -5,6 +5,7 @@ using LibraryAPI.Services;
 using Microsoft.EntityFrameworkCore;
 
 using LibraryAPI.Infrastructure;
+using LibraryAPI.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,14 +16,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<LibraryDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDBConnectionString"))
-);
-builder.Services.AddInfrastructureServices();
+//builder.Services.AddDbContext<LibraryDbContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDBConnectionString"))
+//);
 
-builder.Services.AddScoped<IAuthorRepository, SQLAuthorRepository>();
+//builder.Services.AddSingleton<IBlobStorageService, BlobStorageService>();
+//builder.Services.AddScoped<IAuthorRepository, SQLAuthorRepository>();
+//builder.Services.AddScoped<IBookRepository, SQLBookRepository>();
+
+builder.Services.AddInfrastructureServices();
+builder.Services.AddDataAccessServices(builder.Configuration.GetConnectionString("LibraryDBConnectionString"));
+
 builder.Services.AddScoped<IAuthorsService, AuthorsService>();
-builder.Services.AddScoped<IBookRepository, SQLBookRepository>();
 builder.Services.AddScoped<IBooksService, BooksService>();
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
