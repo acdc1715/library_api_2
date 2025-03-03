@@ -4,6 +4,8 @@ using LibraryAPI.Repositories;
 using LibraryAPI.Services;
 using Microsoft.EntityFrameworkCore;
 
+using LibraryAPI.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,7 +18,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<LibraryDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDBConnectionString"))
 );
-builder.Services.AddSingleton<IBlobStorageService, BlobStorageService>();
+builder.Services.AddInfrastructureServices();
 
 builder.Services.AddScoped<IAuthorRepository, SQLAuthorRepository>();
 builder.Services.AddScoped<IAuthorsService, AuthorsService>();
