@@ -12,3 +12,5 @@ test.txt
 /LibraryAPI/Infrastructure/obj/Infrastructure.csproj.nuget.g.targets
 /LibraryAPI/Infrastructure/obj/project.assets.json
 /LibraryAPI/Infrastructure/obj/project.nuget.cache
+/LibraryAPI/Domain/bin/Debug/net8.0
+/LibraryAPI/Domain/obj

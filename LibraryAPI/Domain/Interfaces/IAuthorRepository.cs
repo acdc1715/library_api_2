@@ -1,5 +1,4 @@
 ﻿using LibraryAPI.Models.Domain;
-using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryAPI.Repositories
 {
