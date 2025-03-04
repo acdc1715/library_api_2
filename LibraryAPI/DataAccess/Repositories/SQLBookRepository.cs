@@ -36,9 +36,9 @@ namespace LibraryAPI.Repositories
             return book;
         }
 
-        public IQueryable<Book> GetAll()
+        public async Task<List<Book>> GetAllAsync()
         {
-            return dbContext.Books.AsQueryable();
+            return await dbContext.Books.ToListAsync();
         }
 
         public async Task<Book?> GetByIdAsync(Guid id)

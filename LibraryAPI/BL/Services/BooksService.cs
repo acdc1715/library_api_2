@@ -4,7 +4,6 @@ using LibraryAPI.Models.Domain;
 using LibraryAPI.Models.DTO;
 using LibraryAPI.Models.QueryParameters;
 using LibraryAPI.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace LibraryAPI.Services
 {
@@ -23,9 +22,8 @@ namespace LibraryAPI.Services
 
         public async Task<List<BookDto>> GetAllAsync()
         {
-            var query = _bookRepository.GetAll();
+            var booksModel = await _bookRepository.GetAllAsync();
 
-            var booksModel = await query.ToListAsync();
             return _mapper.Map<List<BookDto>>(booksModel);
         }
 

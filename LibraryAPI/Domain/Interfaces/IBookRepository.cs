@@ -6,7 +6,7 @@ namespace LibraryAPI.Repositories
     {
         Task<Book> CreateAsync(Book book);
 
-        IQueryable<Book> GetAll();
+        Task<List<Book>> GetAllAsync();
 
         Task<Book?> GetByIdAsync(Guid id);
 

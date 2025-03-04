@@ -36,9 +36,9 @@ namespace LibraryAPI.Repositories
             return existingAuthor;
         }
 
-        public IQueryable<Author> GetAll()
+        public async Task<List<Author>> GetAllAsync()
         {
-            return dbContext.Authors.AsQueryable();
+            return await dbContext.Authors.ToListAsync();
         }
 
         public async Task<Author?> GetByIdAsync(Guid id)

@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 using LibraryAPI.Infrastructure;
 using LibraryAPI.DataAccess;
+using BL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,13 +25,14 @@ builder.Services.AddSwaggerGen();
 //builder.Services.AddScoped<IAuthorRepository, SQLAuthorRepository>();
 //builder.Services.AddScoped<IBookRepository, SQLBookRepository>();
 
+//builder.Services.AddScoped<IAuthorsService, AuthorsService>();
+//builder.Services.AddScoped<IBooksService, BooksService>();
+
+//builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+
 builder.Services.AddInfrastructureServices();
 builder.Services.AddDataAccessServices(builder.Configuration.GetConnectionString("LibraryDBConnectionString"));
-
-builder.Services.AddScoped<IAuthorsService, AuthorsService>();
-builder.Services.AddScoped<IBooksService, BooksService>();
-
-builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+builder.Services.AddBLServices();
 
 var app = builder.Build();
 

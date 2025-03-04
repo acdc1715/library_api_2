@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
 using LibraryAPI.Models.Domain;
 using LibraryAPI.Models.DTO;
-using LibraryAPI.Models.QueryParameters;
 using LibraryAPI.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace LibraryAPI.Services
 {
@@ -20,9 +18,7 @@ namespace LibraryAPI.Services
 
         public async Task<List<AuthorDto>> GetAllAsync()
         {
-            var query = _authorRepository.GetAll();
-
-            var authors = await query.ToListAsync();
+            var authors = await _authorRepository.GetAllAsync();
 
             return _mapper.Map<List<AuthorDto>>(authors);
         }

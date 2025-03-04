@@ -4,7 +4,7 @@ namespace LibraryAPI.Repositories
 {
     public interface IAuthorRepository
     {
-        IQueryable<Author> GetAll();
+        Task<List<Author>> GetAllAsync();
 
         Task<Author?> GetByIdAsync(Guid id);
 

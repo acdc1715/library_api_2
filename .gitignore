@@ -16,3 +16,6 @@ test.txt
 /LibraryAPI/Domain/obj
 /LibraryAPI/DataAccess/bin/Debug/net8.0
 /LibraryAPI/DataAccess/obj
+/LibraryAPI/BL/bin/Debug/net8.0
+/LibraryAPI/BL/obj
+/LibraryAPI/Business/obj
