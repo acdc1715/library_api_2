@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using LibraryAPI.Data;
-using LibraryAPI.Models.Domain;
-using LibraryAPI.Models.DTO;
-using LibraryAPI.Models.QueryParameters;
-using LibraryAPI.Repositories;
+using LibraryAPI.Infrastructure;
+using LibraryAPI.BL.Entities;
+using LibraryAPI.BL.Interfaces;
+using LibraryAPI.BL.DTO;
+using LibraryAPI.BL.QueryParams;
 
-namespace LibraryAPI.Services
+namespace LibraryAPI.BL.Services
 {
     public class BooksService : IBooksService
     {

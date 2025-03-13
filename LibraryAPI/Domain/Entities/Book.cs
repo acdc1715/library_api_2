@@ -1,4 +1,4 @@
-﻿namespace LibraryAPI.Models.Domain
+﻿namespace LibraryAPI.BL.Entities
 {
     public class Book
     {

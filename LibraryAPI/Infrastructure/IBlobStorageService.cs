@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Http;
 
-namespace LibraryAPI.Data
+namespace LibraryAPI.Infrastructure
 {
     public interface IBlobStorageService
     {

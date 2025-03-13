@@ -1,7 +1,6 @@
-﻿using LibraryAPI.Models.DTO;
-using LibraryAPI.Models.QueryParameters;
+﻿using LibraryAPI.BL.DTO;
 
-namespace LibraryAPI.Services
+namespace LibraryAPI.BL.Services
 {
     public interface IAuthorsService
     {

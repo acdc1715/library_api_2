@@ -1,5 +1,4 @@
-﻿using LibraryAPI.Data;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace LibraryAPI.Infrastructure
 {

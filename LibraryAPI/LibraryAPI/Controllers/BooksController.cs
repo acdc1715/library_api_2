@@ -1,8 +1,8 @@
 ﻿using LibraryAPI.CustomActionFilters;
-using LibraryAPI.Models.DTO;
-using LibraryAPI.Models.QueryParameters;
-using LibraryAPI.Services;
+using LibraryAPI.BL.Services;
 using Microsoft.AspNetCore.Mvc;
+using LibraryAPI.BL.DTO;
+using LibraryAPI.BL.QueryParams;
 
 namespace LibraryAPI.Controllers
 {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
-namespace LibraryAPI.Models.DTO
+namespace LibraryAPI.BL.DTO
 {
     public class UpdateBookRequestDto
     {

@@ -1,4 +1,4 @@
-﻿namespace LibraryAPI.Models.DTO
+﻿namespace LibraryAPI.BL.DTO
 {
     public class AuthorDto
     {

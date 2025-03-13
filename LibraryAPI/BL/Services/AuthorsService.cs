@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using LibraryAPI.Models.Domain;
-using LibraryAPI.Models.DTO;
-using LibraryAPI.Repositories;
+using LibraryAPI.BL.Entities;
+using LibraryAPI.BL.Interfaces;
+using LibraryAPI.BL.DTO;
 
-namespace LibraryAPI.Services
+namespace LibraryAPI.BL.Services
 {
     public class AuthorsService : IAuthorsService
     {

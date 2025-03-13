@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using LibraryAPI.Repositories;
-using LibraryAPI.Services;
-using LibraryAPI.Mappings;
+using LibraryAPI.BL.Services;
+using LibraryAPI.BL.Mappings;
 
 namespace BL
 {

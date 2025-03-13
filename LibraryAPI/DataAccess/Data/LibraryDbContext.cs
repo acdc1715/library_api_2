@@ -1,4 +1,4 @@
-﻿using LibraryAPI.Models.Domain;
+﻿using LibraryAPI.BL.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace LibraryAPI.DataAccess

@@ -1,4 +1,4 @@
-﻿namespace LibraryAPI.Models.QueryParameters
+﻿namespace LibraryAPI.BL.QueryParams
 {
     public class QueryParameters
     {

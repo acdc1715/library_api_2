@@ -1,10 +1,6 @@
-using LibraryAPI.Data;
-using LibraryAPI.Mappings;
-using LibraryAPI.Repositories;
-using LibraryAPI.Services;
+using LibraryAPI.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
-using LibraryAPI.Infrastructure;
 using LibraryAPI.DataAccess;
 using BL;
 

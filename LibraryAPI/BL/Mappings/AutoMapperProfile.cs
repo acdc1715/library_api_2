@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using LibraryAPI.Models.Domain;
-using LibraryAPI.Models.DTO;
+using LibraryAPI.BL.Entities;
+using LibraryAPI.BL.DTO;
 
-namespace LibraryAPI.Mappings
+namespace LibraryAPI.BL.Mappings
 {
     public class AutoMapperProfile : Profile
     {

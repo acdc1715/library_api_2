@@ -1,7 +1,7 @@
-﻿using LibraryAPI.Models.DTO;
-using LibraryAPI.Models.QueryParameters;
+﻿using LibraryAPI.BL.DTO;
+using LibraryAPI.BL.QueryParams;
 
-namespace LibraryAPI.Services
+namespace LibraryAPI.BL.Services
 {
     public interface IBooksService
     {

@@ -1,11 +1,10 @@
 ﻿using Azure;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
-using Azure.Storage.Sas;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 
-namespace LibraryAPI.Data
+namespace LibraryAPI.Infrastructure
 {
     public class BlobStorageService : IBlobStorageService
     {

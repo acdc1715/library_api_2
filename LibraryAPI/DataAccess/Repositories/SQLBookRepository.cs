@@ -1,9 +1,9 @@
-﻿using LibraryAPI.DataAccess;
-using LibraryAPI.Models.Domain;
+﻿using LibraryAPI.BL.Entities;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using LibraryAPI.BL.Interfaces;
 
-namespace LibraryAPI.Repositories
+namespace LibraryAPI.DataAccess.Repositories
 {
     public class SQLBookRepository : IBookRepository
     {

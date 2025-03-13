@@ -1,8 +1,8 @@
-﻿using LibraryAPI.DataAccess;
-using LibraryAPI.Models.Domain;
+﻿using LibraryAPI.BL.Entities;
+using LibraryAPI.BL.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace LibraryAPI.Repositories
+namespace LibraryAPI.DataAccess.Repositories
 {
     public class SQLAuthorRepository : IAuthorRepository
     {

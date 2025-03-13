@@ -1,6 +1,6 @@
-﻿using LibraryAPI.Models.Domain;
+﻿using LibraryAPI.BL.Entities;
 
-namespace LibraryAPI.Repositories
+namespace LibraryAPI.BL.Interfaces
 {
     public interface IBookRepository
     {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using LibraryAPI.Repositories;
+using LibraryAPI.BL.Interfaces;
+using LibraryAPI.DataAccess.Repositories;
 
 namespace LibraryAPI.DataAccess
 {
