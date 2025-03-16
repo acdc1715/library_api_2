@@ -1,5 +1,5 @@
-﻿using LibraryAPI.BL.Entities;
-using LibraryAPI.BL.Interfaces;
+﻿using LibraryAPI.Domain.Entities;
+using LibraryAPI.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace LibraryAPI.DataAccess.Repositories

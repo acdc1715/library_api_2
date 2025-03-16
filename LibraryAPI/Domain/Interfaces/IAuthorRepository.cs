@@ -1,6 +1,6 @@
-﻿using LibraryAPI.BL.Entities;
+﻿using LibraryAPI.Domain.Entities;
 
-namespace LibraryAPI.BL.Interfaces
+namespace LibraryAPI.Domain.Interfaces
 {
     public interface IAuthorRepository
     {
