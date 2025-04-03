@@ -5,7 +5,7 @@ namespace LibraryAPI.DataAccess
 {
     public class LibraryDbContext : DbContext
     {
-        public LibraryDbContext(DbContextOptions options) : base(options)
+        public LibraryDbContext(DbContextOptions<LibraryDbContext> options) : base(options)
         {       
         }
 

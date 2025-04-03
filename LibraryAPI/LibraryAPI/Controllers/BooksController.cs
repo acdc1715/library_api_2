@@ -3,11 +3,13 @@ using LibraryAPI.BL.Services;
 using Microsoft.AspNetCore.Mvc;
 using LibraryAPI.BL.DTO;
 using LibraryAPI.BL.QueryParams;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LibraryAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BooksController : ControllerBase
     {
         private readonly IBooksService _booksService;
