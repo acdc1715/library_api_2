@@ -2,6 +2,7 @@
 using LibraryAPI.BL.Services;
 using Microsoft.AspNetCore.Mvc;
 using LibraryAPI.BL.DTO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LibraryAPI.Controllers
 {
@@ -17,6 +18,7 @@ namespace LibraryAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles ="Reader,Writer")]
         public async Task<IActionResult> GetAll()
         {
             var authorsDto = await _authorsService.GetAllAsync();
@@ -24,6 +26,7 @@ namespace LibraryAPI.Controllers
         }
 
         [HttpGet("{id:Guid}")]
+        [Authorize(Roles = "Reader,Writer")]
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             var authorDto = await _authorsService.GetByIdAsync(id);
@@ -37,6 +40,7 @@ namespace LibraryAPI.Controllers
 
         [HttpPost]
         [ValidateModel]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Create([FromBody] CreateAuthorRequestDto createAuthorRequestDto)
         {
             var authorDto = await _authorsService.CreateAsync(createAuthorRequestDto);
@@ -45,6 +49,7 @@ namespace LibraryAPI.Controllers
 
         [HttpPut("{id:Guid}")]
         [ValidateModel]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateAuthorRequestDto updateAuthorRequestDto)
         {
             var authorDto = await _authorsService.UpdateAsync(id, updateAuthorRequestDto);
@@ -57,6 +62,7 @@ namespace LibraryAPI.Controllers
         }
 
         [HttpDelete("{id:Guid}")]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             var authorDto = await _authorsService.DeleteAsync(id);

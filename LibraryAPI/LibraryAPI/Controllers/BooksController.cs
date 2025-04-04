@@ -9,7 +9,6 @@ namespace LibraryAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class BooksController : ControllerBase
     {
         private readonly IBooksService _booksService;
@@ -28,6 +27,7 @@ namespace LibraryAPI.Controllers
         //}
 
         [HttpGet]
+        [Authorize(Roles = "Reader,Writer")]
         public async Task<IActionResult> GetAll([FromQuery] QueryParameters queryParams)
         {
             var booksDto = await _booksService.GetBooksPagedAsync(queryParams);
@@ -36,6 +36,7 @@ namespace LibraryAPI.Controllers
         }
 
         [HttpGet("{id:Guid}")]
+        [Authorize(Roles = "Reader,Writer")]
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             var bookDto = await _booksService.GetByIdAsync(id);
@@ -47,7 +48,8 @@ namespace LibraryAPI.Controllers
             return Ok(bookDto);
         }
         [HttpPost]
-        [ValidateModel] 
+        [ValidateModel]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Create([FromForm] CreateBookRequestDto createBookRequestDto)
         {
             var bookDto = await _booksService.CreateAsync(createBookRequestDto);
@@ -56,6 +58,7 @@ namespace LibraryAPI.Controllers
 
         [HttpPut("{id:Guid}")]
         [ValidateModel]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromForm] UpdateBookRequestDto updateBookRequestDto)
         {
             var bookDto = await _booksService.UpdateAsync(id, updateBookRequestDto);
@@ -68,6 +71,7 @@ namespace LibraryAPI.Controllers
         }
 
         [HttpDelete("{id:Guid}")]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             var bookDto = await _booksService.DeleteAsync(id);

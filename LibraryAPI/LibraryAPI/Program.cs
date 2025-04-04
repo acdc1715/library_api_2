@@ -11,10 +11,28 @@ using LibraryAPI.Domain.Interfaces;
 using LibraryAPI.DataAccess.Repositories;
 using LibraryAPI.BL.Services;
 using LibraryAPI.BL.Mappings;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddIdentityCore<IdentityUser>()
+    .AddRoles<IdentityRole>()
+    .AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("LibraryAPI")
+    .AddEntityFrameworkStores<LibraryAuthDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
+});
+
 
 builder.Services.AddAuthentication(options =>
 {
