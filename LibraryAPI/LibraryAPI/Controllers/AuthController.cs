@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-using LibraryAPI.BL.DTO;
+using LibraryAPI.BL.DTO.Auth;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 
-namespace LibraryAPI.Controllers
+namespace LibraryAPI.Controllers.Auth
 {
     [Route("api/[controller]")]
     [ApiController]

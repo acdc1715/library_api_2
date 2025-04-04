@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryAPI.BL.DTO
+namespace LibraryAPI.BL.DTO.Auth
 {
     public class LoginResponceDto
     {
