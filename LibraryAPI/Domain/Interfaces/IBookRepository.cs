@@ -1,0 +1,18 @@
+﻿using LibraryAPI.Domain.Entities;
+
+namespace LibraryAPI.Domain.Interfaces
+{
+    public interface IBookRepository
+    {
+        Task<Book> CreateAsync(Book book);
+
+        Task<List<Book>> GetAllAsync();
+
+        Task<Book?> GetByIdAsync(Guid id);
+
+        Task<Book?> UpdateAsync(Guid id, Book book);
+
+        Task<Book?> DeleteAsync(Guid id);
+        Task<List<Book>> GetBooksPagedAsync(string? searchQuery, Guid? authorId, string? sortBy, /*bool isAscending, */int pageNumber, int pageSize);
+    }
+}
